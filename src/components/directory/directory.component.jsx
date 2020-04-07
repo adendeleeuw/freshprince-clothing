@@ -9,37 +9,42 @@ class Directory extends Component {
     this.state = {
       sections: [
         {
-          title: "hats",
-          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+          title: "long life food",
+          imageUrl:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTv-rx1ONMsvctgspwHyo9wveF0IGA5JMM14uP0_rkNqd9rHSpY&usqp=CAU",
           id: 1,
-          linkUrl: "shop/hats"
+          linkUrl: "shop/food"
         },
         {
-          title: "jackets",
-          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+          title: "masks",
+          imageUrl:
+            "https://m.media-amazon.com/images/I/6155zk6PRiL._SR500,500_.jpg",
           id: 2,
-          linkUrl: "shop/jackets"
+          linkUrl: "shop/masks"
         },
         {
-          title: "sneakers",
-          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+          title: "survival tools",
+          imageUrl:
+            "https://i1.wp.com/travelvagrants.com/wp-content/uploads/2019/11/8fc109bf-3d83-45eb-803e-a699eafe1a02.png?fit=810%2C405&ssl=1",
           id: 3,
-          linkUrl: "shop/sneakers"
+          linkUrl: "shop/survival-tools"
         },
         {
-          title: "womens",
-          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+          title: "home gardening",
+          imageUrl:
+            "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/square-foot-gardening-by-planting-flowers-herbs-and-news-photo-584618354-1532960706.jpg",
           size: "large",
           id: 4,
-          linkUrl: "shop/womens",
+          linkUrl: "shop/gardening",
           size: "large"
         },
         {
-          title: "mens",
-          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+          title: "guns",
+          imageUrl:
+            "https://d2eehagpk5cl65.cloudfront.net/img/c800x450-w800-q80/uploads/2020/04/zumaamericastwentyseven140828-800x450.jpg",
           size: "large",
           id: 5,
-          linkUrl: "shop/mens",
+          linkUrl: "shop/guns",
           size: "large"
         }
       ]
@@ -49,8 +54,8 @@ class Directory extends Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, imageUrl, id, size }) => (
-          <MenuItem id={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.sections.map(({ id, ...sectionProps }) => (
+          <MenuItem id={id} {...sectionProps} />
         ))}
       </div>
     );
