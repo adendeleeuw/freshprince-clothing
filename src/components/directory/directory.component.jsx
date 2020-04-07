@@ -9,42 +9,37 @@ class Directory extends Component {
     this.state = {
       sections: [
         {
-          title: "long life food",
-          imageUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTv-rx1ONMsvctgspwHyo9wveF0IGA5JMM14uP0_rkNqd9rHSpY&usqp=CAU",
+          title: "hats",
+          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
           id: 1,
-          linkUrl: "shop/food"
+          linkUrl: "shop/hats"
         },
         {
-          title: "masks",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/6155zk6PRiL._SR500,500_.jpg",
+          title: "jackets",
+          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
           id: 2,
-          linkUrl: "shop/masks"
+          linkUrl: "shop/jackets"
         },
         {
-          title: "survival tools",
-          imageUrl:
-            "https://i1.wp.com/travelvagrants.com/wp-content/uploads/2019/11/8fc109bf-3d83-45eb-803e-a699eafe1a02.png?fit=810%2C405&ssl=1",
+          title: "sneakers",
+          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
           id: 3,
-          linkUrl: "shop/survival-tools"
+          linkUrl: "shop/sneakers"
         },
         {
-          title: "home gardening",
-          imageUrl:
-            "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/square-foot-gardening-by-planting-flowers-herbs-and-news-photo-584618354-1532960706.jpg",
+          title: "womens",
+          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
           size: "large",
           id: 4,
-          linkUrl: "shop/gardening",
+          linkUrl: "shop/womens",
           size: "large"
         },
         {
-          title: "guns",
-          imageUrl:
-            "https://d2eehagpk5cl65.cloudfront.net/img/c800x450-w800-q80/uploads/2020/04/zumaamericastwentyseven140828-800x450.jpg",
+          title: "mens",
+          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
           size: "large",
           id: 5,
-          linkUrl: "shop/guns",
+          linkUrl: "shop/mens",
           size: "large"
         }
       ]
@@ -54,8 +49,8 @@ class Directory extends Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ id, ...sectionProps }) => (
-          <MenuItem id={id} {...sectionProps} />
+        {this.state.sections.map(({ id, ...otherMenuProps }) => (
+          <MenuItem id={id} {...otherMenuProps} />
         ))}
       </div>
     );
